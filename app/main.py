@@ -56,14 +56,14 @@ class DataProvider:
 
 
 def organize_data(humans: T_HUMANS)->dict:
-    groups = {}
+    output = {}
     for human in humans:
         group_name = human['group']
-        if group_name not in groups:
-            groups[group_name] = []
-        groups[group_name].append(human['name'])
+        if group_name not in output:
+            output[group_name] = []
+        output[group_name].append(human['name'])
 
-    return groups
+    return output
 
 
 
